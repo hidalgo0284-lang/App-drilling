@@ -1,7 +1,0 @@
-pandas
-numpy
-openpyxl
-matplotlib
-python-docx
-python-pptx
-pillow
