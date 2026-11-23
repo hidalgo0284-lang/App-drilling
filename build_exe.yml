@@ -1,0 +1,16 @@
+name: Crear DrillTracking_Geologia.exe
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt pyinstaller
+      - run: pyinstaller --noconfirm --clean --onefile --windowed --name DrillTracking_Geologia --icon logo.ico --collect-all docx --collect-all pptx --hidden-import openpyxl app_drilltracking.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: DrillTracking_Geologia
+          path: dist/DrillTracking_Geologia.exe
