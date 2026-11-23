@@ -1,0 +1,24 @@
+DRILLTRACKING - Area de Geologia (Chinalco)
+Seguimiento MREDP 2026 / KPDI: Excel de control -> Dashboard HTML + Reporte Word + Presentacion PPT
+
+ARCHIVOS
+  app_drilltracking.py   Interfaz de escritorio
+  motor_reportes.py      Motor de calculo y reportes (el mismo del Colab)
+  requirements.txt       Librerias necesarias
+  logo.ico               Icono del ejecutable
+  build_exe.bat          Crea el .exe en Windows (doble clic)
+  .github/workflows/     Alternativa: crear el .exe en GitHub sin instalar Python
+
+COMO OBTENER EL .EXE (Windows)
+  Opcion A - En tu PC: instala Python 3.10+ (marca "Add python.exe to PATH") y haz doble clic en build_exe.bat.
+             El archivo queda en dist\DrillTracking_Geologia.exe (no requiere Python para usarse).
+  Opcion B - Sin Python: sube esta carpeta a un repositorio de GitHub y ejecuta la accion
+             "Crear DrillTracking_Geologia.exe" (pestana Actions); descarga el .exe desde Artifacts.
+
+USO
+  1. Abrir DrillTracking_Geologia.exe
+  2. Seleccionar el Excel de control de avances
+  3. (Opcional) Carpeta de salida y fecha del reporte
+  4. Generar todo (o cada formato por separado). La carpeta se abre al terminar.
+
+Sin instalar nada tambien se puede ejecutar:  python app_drilltracking.py
